@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="IS0-8859-1">
+    <title>Конкретный человек</title>
+</head>
+
+<body>
+<p/>
+<div>
+    <nobr>
+        <a th:href="@{/users/{id}/delete/(id=${user.getId()})}">Delete</a> |
+        <a th:href="@{/users/{id}/edit/(id=${user.getId()})}">Edit</a>
+    </nobr>
+</div>
+<p/>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City of birth</th>
+    </tr>
+
+    <tr>
+        <td th:text="${user.getId()}">VALUE</td>
+        <td th:text="${user.getName()}">VALUE</td>
+        <td th:text="${user.getAge()}">VALUE</td>
+        <td th:text="${user.getCityOfBirth()}">VALUE</td>
+    </tr>
+</table>
+</body>
+
+</html>
